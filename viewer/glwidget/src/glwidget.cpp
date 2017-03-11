@@ -78,21 +78,10 @@ void GLWidget::loadDefaultPlugins(QString& plugins) {
     }
     else
     {
-        #if defined(__APPLE__)
-        defaultPlugins << pluginPath+"libdraw-vbo-ext.dylib";
-        defaultPlugins << pluginPath+"librenderdefault.dylib";
-        defaultPlugins << pluginPath+"libnavigatedefault.dylib";
-        #elif defined(__unix__)
-        //defaultPlugins << pluginPath+"libdrawimmediate.so";
-        defaultPlugins << pluginPath+"libdraw-vbo-ext.so";
-        //defaultPlugins << pluginPath+"libshaderloader.so";
-        defaultPlugins << pluginPath+"librenderdefault.so";
-        defaultPlugins << pluginPath+"libnavigatedefault.so";
-        #else  // Windows?
-        defaultPlugins << pluginPath+"libdraw-vbo-ext.dll";
-        defaultPlugins << pluginPath+"librenderdefault.dll";
-        defaultPlugins << pluginPath+"libnavigatedefault.dll";
-        #endif
+        defaultPlugins << pluginPath+"draw-vbo-ext.dll";
+        defaultPlugins << pluginPath+"renderdefault.dll";
+        defaultPlugins << pluginPath+"navigatedefault.dll";
+		defaultPlugins << pluginPath + "shaderloader.dll";
     }
     loadPlugins(defaultPlugins);
 }
@@ -548,7 +537,7 @@ void GLWidget::addObjectFromFile(const QString& filename)
 
 void GLWidget::addObject()
 {
-    QString models = "/assig/grau-g/models";
+    QString models = "models";
     char* tmp = getenv ("VMODELS");
     if (tmp!=NULL) models=QString(tmp);
 

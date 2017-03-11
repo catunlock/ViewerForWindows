@@ -38,13 +38,8 @@ int main(int argc, char ** argv)
     if (tmp!=NULL) pluginPath=QString(tmp);
     else
     {
-        pluginPath = a.applicationDirPath();
-        #if defined(__APPLE__)
-        pluginPath.append("/../../../");
-        #else
-        pluginPath.append("/");
-        # endif
-        pluginPath.append("../../plugins/bin/");
+        pluginPath = a.applicationDirPath().append("/");
+        //pluginPath.append("/plugins/");
     }
     glWidget.setPluginPath(pluginPath);
 

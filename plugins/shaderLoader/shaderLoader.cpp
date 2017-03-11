@@ -1972,22 +1972,15 @@ void ShaderLoader::compareTest()
 
     // open in external editor
 
-#ifndef __APPLE__
    QString visor = "eog";
-#else
-   QString visor = "/Applications/Preview.app";
-#endif
    char* pPath;
    pPath = getenv ("VIMAGE");
    if (pPath!=NULL)
        visor=QString(pPath);
 
     QProcess* process = new QProcess(glwidget());
-#ifndef __APPLE__
     process->startDetached(visor,  QStringList() << summaryName);
-#else
-    process->startDetached("open", QStringList() << QString("-a")+visor << summaryName);
-#endif    
+
 }
 
 
