@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "core", "J:/Descargas/NewViewer_8522e9b/NewViewer_8522e9b/viewer/core\core.vcxproj", "{836A2F06-B275-3BA0-BEB9-BE5934B5A4ED}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glwidgetd", "J:/Descargas/NewViewer_8522e9b/NewViewer_8522e9b/viewer/glwidget\glwidgetd.vcxproj", "{5190137E-0901-3B17-8BD4-8DEBF01B8C97}"
+	ProjectSection(ProjectDependencies) = postProject
+		{836A2F06-B275-3BA0-BEB9-BE5934B5A4ED} = {836A2F06-B275-3BA0-BEB9-BE5934B5A4ED}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "viewerd", "J:/Descargas/NewViewer_8522e9b/NewViewer_8522e9b/viewer/app\viewerd.vcxproj", "{F2938BD4-E2A6-3AE4-BAAE-CC905748FEB7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5190137E-0901-3B17-8BD4-8DEBF01B8C97} = {5190137E-0901-3B17-8BD4-8DEBF01B8C97}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{836A2F06-B275-3BA0-BEB9-BE5934B5A4ED}.Debug|Win32.ActiveCfg = Debug|Win32
+		{836A2F06-B275-3BA0-BEB9-BE5934B5A4ED}.Debug|Win32.Build.0 = Debug|Win32
+		{836A2F06-B275-3BA0-BEB9-BE5934B5A4ED}.Release|Win32.ActiveCfg = Release|Win32
+		{836A2F06-B275-3BA0-BEB9-BE5934B5A4ED}.Release|Win32.Build.0 = Release|Win32
+		{5190137E-0901-3B17-8BD4-8DEBF01B8C97}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5190137E-0901-3B17-8BD4-8DEBF01B8C97}.Debug|Win32.Build.0 = Debug|Win32
+		{5190137E-0901-3B17-8BD4-8DEBF01B8C97}.Release|Win32.ActiveCfg = Release|Win32
+		{5190137E-0901-3B17-8BD4-8DEBF01B8C97}.Release|Win32.Build.0 = Release|Win32
+		{F2938BD4-E2A6-3AE4-BAAE-CC905748FEB7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F2938BD4-E2A6-3AE4-BAAE-CC905748FEB7}.Debug|Win32.Build.0 = Debug|Win32
+		{F2938BD4-E2A6-3AE4-BAAE-CC905748FEB7}.Release|Win32.ActiveCfg = Release|Win32
+		{F2938BD4-E2A6-3AE4-BAAE-CC905748FEB7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
