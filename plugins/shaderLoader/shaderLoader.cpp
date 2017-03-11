@@ -1329,6 +1329,8 @@ void ShaderLoader::openFilesInTextEditor()
       process->startDetached("open", QStringList() << QString("-a")+editor << filename+".vert" << filename+".frag");
 #endif
     }
+
+	
 }
 
 
@@ -1344,12 +1346,19 @@ void ShaderLoader::showTextures()
     if (pPath!=NULL)
         visor=QString(pPath);
 
+
+	QDesktopServices::openUrl(QUrl(textureName[0]));
+	QDesktopServices::openUrl(QUrl(textureName[1]));
+	QDesktopServices::openUrl(QUrl(textureName[2]));
+	QDesktopServices::openUrl(QUrl(textureName[3]));
+	/*
     QProcess* process = new QProcess(glwidget());
 #ifndef __APPLE__
     process->startDetached(visor,  QStringList() << textureName[0] << textureName[1] << textureName[2] << textureName[3]);
 #else
     process->startDetached("open", QStringList() << QString("-a")+visor << textureName[0] << textureName[1] << textureName[2] << textureName[3]);
-#endif    
+#endif
+*/
 }
 
 void ShaderLoader::drawHelp()
@@ -1971,7 +1980,7 @@ void ShaderLoader::compareTest()
     scale.save(filename + QString("-cmp-small.png")); 
 
     // open in external editor
-
+	/*
    QString visor = "eog";
    char* pPath;
    pPath = getenv ("VIMAGE");
@@ -1980,7 +1989,9 @@ void ShaderLoader::compareTest()
 
     QProcess* process = new QProcess(glwidget());
     process->startDetached(visor,  QStringList() << summaryName);
-
+	*/
+	cout << "Abriendo con la aplicacion por defecto del sistema." << endl;
+	QDesktopServices::openUrl(QUrl(summaryName));
 }
 
 

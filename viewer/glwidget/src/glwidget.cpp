@@ -78,10 +78,17 @@ void GLWidget::loadDefaultPlugins(QString& plugins) {
     }
     else
     {
-        defaultPlugins << pluginPath+"draw-vbo-ext.dll";
-        defaultPlugins << pluginPath+"renderdefault.dll";
-        defaultPlugins << pluginPath+"navigatedefault.dll";
+#if _DEBUG
+		defaultPlugins << pluginPath + "draw-vbo-extd.dll";
+		defaultPlugins << pluginPath + "renderdefaultd.dll";
+		defaultPlugins << pluginPath + "navigatedefaultd.dll";
+		defaultPlugins << pluginPath + "shaderloaderd.dll";
+#else
+		defaultPlugins << pluginPath + "draw-vbo-ext.dll";
+		defaultPlugins << pluginPath + "renderdefault.dll";
+		defaultPlugins << pluginPath + "navigatedefault.dll";
 		defaultPlugins << pluginPath + "shaderloader.dll";
+#endif
     }
     loadPlugins(defaultPlugins);
 }
